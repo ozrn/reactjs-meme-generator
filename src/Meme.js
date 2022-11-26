@@ -5,9 +5,13 @@ export default function Meme() {
     
     const parsedData = JSON.parse(JSON.stringify(memesData)); 
     
-    const memesArray = parsedData.data.memes
+    const memesArray = parsedData.data.memes;
+
+    const randomNumber = Math.floor(Math.random() * memesArray.length);
     
-    console.log(memesArray);
+    const {url} = memesArray[randomNumber];
+
+    console.log(url);
 }
   return (
     <main>
